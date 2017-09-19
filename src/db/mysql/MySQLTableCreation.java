@@ -51,7 +51,7 @@ public class MySQLTableCreation {
 					+ " PRIMARY KEY ( item_id ))";
 			stmt.executeUpdate(sql);
 
-			// Student question: why use a combine key here?
+			
 			sql = "CREATE TABLE categories " + "(item_id VARCHAR(255) NOT NULL, " + " category VARCHAR(255), "
 					+ " PRIMARY KEY ( item_id, category), " + "FOREIGN KEY (item_id) REFERENCES items(item_id))";
 			stmt.executeUpdate(sql);
@@ -63,6 +63,7 @@ public class MySQLTableCreation {
 			sql = "CREATE TABLE history " + "(history_id bigint(20) unsigned NOT NULL AUTO_INCREMENT, "
 					+ " user_id VARCHAR(255) NOT NULL , " + " item_id VARCHAR(255) NOT NULL, "
 					+ " last_favor_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, " + " PRIMARY KEY (history_id),"
+					+ " UNIQUE KEY `user_item_id` (`user_id`,`item_id`),"
 					+ "FOREIGN KEY (item_id) REFERENCES items(item_id),"
 					+ "FOREIGN KEY (user_id) REFERENCES users(user_id))";
 			stmt.executeUpdate(sql);

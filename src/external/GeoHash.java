@@ -1,8 +1,6 @@
 package external;
 
-/**
- * Source: http://developer-should-know.com/post/87283491372/geohash-encoding-and-decoding-algorithm *
- */
+// A coopy from http://developer-should-know.com/post/87283491372/geohash-encoding-and-decoding-algorithm
 public class GeoHash {
 
     private static final String BASE_32 = "0123456789bcdefghjkmnpqrstuvwxyz";
@@ -50,8 +48,9 @@ public class GeoHash {
 
         return geohash.toString();
     }
-    
+
     public static void main(String[] args) {
+    	// Expect to see 'u4pruydqqvj8'
     	System.out.println(encodeGeohash(57.64911, 10.40744, 12));
     }
 }

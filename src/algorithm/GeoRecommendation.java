@@ -35,8 +35,7 @@ public class GeoRecommendation implements Recommendation {
     	allCategories.add("");
     }
 
-    // Student question: why we use list now instead of set?
-    // Answer: because we will have ranking now.
+    // Use list now instead of set to have ranking.
     List<Item> filteredItems = new ArrayList<>();  // step 4
     for (Item item : recommendedItems) {
       if (!favoriteItems.contains(item.getItemId())) {

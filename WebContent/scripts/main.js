@@ -12,8 +12,8 @@
 		$('fav-btn').addEventListener('click', loadFavoriteItems);
 		$('recommend-btn').addEventListener('click', loadRecommendedItems);
 
-		//initGeoLocation();
-		loadNearbyItems();
+		initGeoLocation();
+		//loadNearbyItems();
 	}
   
   

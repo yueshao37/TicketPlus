@@ -128,7 +128,7 @@ public class MongoDBConnection implements DBConnection {
 								.append("rating", item.getRating()).append("address", item.getAddress())
 								.append("latitude", item.getLatitude()).append("longitude", item.getLongitude())
 								.append("description", item.getDescription()).append("snippet", item.getSnippet())
-								.append("snippet_url", item.getSnippetUrl()).append("image_url", item.getImageUrl())
+								.append("snippet_url", item.getSnippetUrl()).append("image_url", item.getImage_url())
 								.append("url", item.getUrl()).append("categories", item.getCategories())),
 				options);
 	}

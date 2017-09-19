@@ -60,7 +60,7 @@ public class Item {
 	public Set<String> getCategories() {
 		return categories;
 	}
-	public String getImageUrl() {
+	public String getImage_url() {
 		return imageUrl;
 	}
 	public String getUrl() {

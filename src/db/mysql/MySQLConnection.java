@@ -192,7 +192,7 @@ public class MySQLConnection implements DBConnection {
       statement.setString(11, item.getDescription());
       statement.setString(12, item.getSnippet());
       statement.setString(13, item.getSnippetUrl());
-      statement.setString(14, item.getImageUrl());
+      statement.setString(14, item.getImage_url());
       statement.setString(15, item.getUrl());
       statement.execute();
 
