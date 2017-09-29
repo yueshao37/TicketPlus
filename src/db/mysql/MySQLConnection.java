@@ -26,7 +26,7 @@ public class MySQLConnection implements DBConnection {
     return instance;
   }
 
-  // Import java.sql.Connection. Don't use com.mysql.jdbc.Connection.
+  // Import java.sql.Connection.
   private Connection conn = null;
 
   private MySQLConnection() {
@@ -135,8 +135,6 @@ public class MySQLConnection implements DBConnection {
 	        }
 	        
 	        // Join categories information into builder.
-	        // But why we do not join in sql? Because it'll be difficult
-	        // to set it in builder.
 	        sql = "SELECT * from categories WHERE item_id = ?";
 	        statement = conn.prepareStatement(sql);
 	        statement.setString(1, itemId);
@@ -216,9 +214,6 @@ public class MySQLConnection implements DBConnection {
     List<Item> items = api.search(lat, lon, term);
     for (Item item : items) {
       // Save the item into our own db.
-      // Student question: why we need to store them on our own instead of
-      // reusing external API's
-      // db?
       saveItem(item);
     }
     return items;

@@ -50,7 +50,7 @@ public class SearchItem extends HttpServlet {
     Set<String> favorite = conn.getFavoriteItemIds(userId);
     try {
       for (Item item : items) {
-        // Add a thin version of restaurant object
+        // Add a thin version of event object
         JSONObject obj = item.toJSONObject();
         // Check if this is a favorite one.
         // This field is required by frontend to correctly display favorite items.

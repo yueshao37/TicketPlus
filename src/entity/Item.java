@@ -98,9 +98,8 @@ public class Item {
 		return obj;
 	}
 	
-	/**
-	 * This is a builder pattern in Java.
-	 */
+
+
 	private Item(ItemBuilder builder) {
 		this.itemId = builder.itemId;
 		this.name = builder.name;

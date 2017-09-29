@@ -142,7 +142,6 @@
 	        }
 	      }
 
-	      // Uses this builder pattern we can freely add fields.
 	      Item item = builder.build();
 	      itemList.add(item);
 	    }
